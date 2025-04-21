@@ -6,7 +6,7 @@
 #   dir2
 #   dir3
 #       dir4
-mkdir task task/dir1 task/dir2 task/dir3 task/dir3/dir4
+mkdir -p task/dir1 task/dir2 task/dir3/dir4
 
 # изменяем текущую директорию на task
 cd task
@@ -37,7 +37,7 @@ find . -type f -name "*.txt" > dir1/summary.txt
 cat dir2/list.txt >> dir1/summary.txt
 
 # определяем переменную окружения NAME со значением "Всем студентам"
-NAME="Всем студентам"
+export NAME="Всем студентам"
 
 # запускаем task/dir2/hello.sh с переменной окружения NAME в качестве аргумента
 # вывод скрипта должен дописаться в файл task/dir1/summary.txt
